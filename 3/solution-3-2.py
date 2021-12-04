@@ -1,4 +1,4 @@
-from binarytree import Node, tree
+from binarytree import Node
 
 
 def solve(file_path):
@@ -13,14 +13,12 @@ def solve(file_path):
             if char == '0':
                 if curr_node.left is None:
                     curr_node.left = Node(1)
-                    # curr_node.left.properties['bval'] = '0'
                 else:
                     curr_node.left.value += 1
                 curr_node = curr_node.left
             elif char == '1':
                 if curr_node.right is None:
                     curr_node.right = Node(1)
-                    # curr_node.left.properties['bval'] = '1'
                 else:
                     curr_node.right.value += 1
                 curr_node = curr_node.right
